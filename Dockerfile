@@ -11,3 +11,4 @@ RUN cp linux-amd64/tiller /usr/bin/tiller && chgrp root /usr/bin/tiller && chmod
 RUN helm init --client-only && chgrp -R root /root/.helm && chmod -R 770 /root/.helm
 #COPY template1 ./template1
 #RUN helm --debug --host=localhost:44134 template template1
+CMD while true; do echo "loop"; sleep 60; done;
